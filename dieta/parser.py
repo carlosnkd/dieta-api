@@ -8,7 +8,7 @@ import anthropic
 from pydantic import BaseModel
 
 from . import catalogo
-from .config import ANTHROPIC_EFFORT, ANTHROPIC_MODEL, WEB_SEARCH
+from .config import ANTHROPIC_API_KEY, ANTHROPIC_EFFORT, ANTHROPIC_MODEL, WEB_SEARCH
 
 log = logging.getLogger(__name__)
 
@@ -129,7 +129,7 @@ _client: anthropic.Anthropic | None = None
 def _get_client() -> anthropic.Anthropic:
     global _client
     if _client is None:
-        _client = anthropic.Anthropic(timeout=120.0)
+        _client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY or None, timeout=120.0)
     return _client
 
 
