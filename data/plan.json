@@ -2,16 +2,17 @@
   "_descripcion": "Plan Nutricional (Mariana Meza, 06/07/26). 'meta_diaria' sale de la Tabla de Equivalencias del plan y es contra lo que se mide cada día. 'tiempos_de_comida' es el desglose del Menú Ejemplo, como referencia.",
   "objetivo": "Aumentar masa muscular",
   "zona_horaria": "America/Mexico_City",
+  "_kcal": "kcal = calorías por equivalente (SMAE). La meta de kcal es la suma de meta_diaria × kcal.",
   "categorias": {
-    "verduras":            {"nombre": "Verduras",                 "corto": "Verd",  "meta_diaria": 4},
-    "frutas":              {"nombre": "Frutas",                   "corto": "Fruta", "meta_diaria": 5},
-    "cereales":            {"nombre": "Cereales",                 "corto": "Cer",   "meta_diaria": 16},
-    "aoa_bajo_grasa":      {"nombre": "AOA bajo en grasa",        "corto": "AOA-b", "meta_diaria": 14},
-    "aoa_moderado_grasa":  {"nombre": "AOA moderado en grasa",    "corto": "AOA-m", "meta_diaria": 4},
-    "scoop_proteina":      {"nombre": "Scoop proteína",           "corto": "Scoop", "meta_diaria": 2},
-    "leche":               {"nombre": "Leche",                    "corto": "Leche", "meta_diaria": 3},
-    "grasas_sin_proteina": {"nombre": "Grasas sin proteína",      "corto": "Gras",  "meta_diaria": 3},
-    "grasas_con_proteina": {"nombre": "Grasas con proteína",      "corto": "GrasP", "meta_diaria": 3}
+    "verduras":            {"nombre": "Verduras",                 "corto": "Verd",  "meta_diaria": 4, "kcal": 25},
+    "frutas":              {"nombre": "Frutas",                   "corto": "Fruta", "meta_diaria": 5, "kcal": 60},
+    "cereales":            {"nombre": "Cereales",                 "corto": "Cer",   "meta_diaria": 16, "kcal": 70},
+    "aoa_bajo_grasa":      {"nombre": "AOA bajo en grasa",        "corto": "AOA-b", "meta_diaria": 14, "kcal": 55},
+    "aoa_moderado_grasa":  {"nombre": "AOA moderado en grasa",    "corto": "AOA-m", "meta_diaria": 4, "kcal": 75},
+    "scoop_proteina":      {"nombre": "Scoop proteína",           "corto": "Scoop", "meta_diaria": 2, "kcal": 120},
+    "leche":               {"nombre": "Leche",                    "corto": "Leche", "meta_diaria": 3, "kcal": 95},
+    "grasas_sin_proteina": {"nombre": "Grasas sin proteína",      "corto": "Gras",  "meta_diaria": 3, "kcal": 45},
+    "grasas_con_proteina": {"nombre": "Grasas con proteína",      "corto": "GrasP", "meta_diaria": 3, "kcal": 70}
   },
   "tiempos_de_comida": {
     "desayuno": {

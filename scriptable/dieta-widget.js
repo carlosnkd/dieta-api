@@ -43,8 +43,54 @@ function barra(pct, ancho, alto) {
     return ctx.getImage();
 }
 
+// Junta AOA bajo y moderado en grasa en una sola categoría "AOA".
+function agruparAOA(cats) {
+    const aoa = cats.filter((c) => c.clave.startsWith('aoa_'));
+    if (aoa.length < 2) return cats;
+    const consumido = aoa.reduce((s, c) => s + c.consumido, 0);
+    const meta = aoa.reduce((s, c) => s + c.meta, 0);
+    const unido = {
+        clave: 'aoa',
+        nombre: 'AOA',
+        corto: 'AOA',
+        consumido: Math.round(consumido * 100) / 100,
+        meta,
+        pct: meta ? Math.round((100 * consumido) / meta) : 0,
+    };
+    const i = cats.indexOf(aoa[0]);
+    const resto = cats.filter((c) => !c.clave.startsWith('aoa_'));
+    resto.splice(i, 0, unido);
+    return resto;
+}
+
 function fmt(n) {
     return Number.isInteger(n) ? String(n) : n.toFixed(1).replace(/\.0$/, '');
+}
+
+// Una línea: nombre | barra | consumido/meta. Los anchos fijos evitan que se corte el texto.
+function lineaProgreso(stack, nombre, texto, pct, anchos, tamFuente) {
+    const linea = stack.addStack();
+    linea.centerAlignContent();
+    const caja = linea.addStack();
+    caja.size = new Size(anchos.nombre, 0);
+    const n = caja.addText(nombre);
+    n.font = Font.mediumSystemFont(tamFuente);
+    n.textColor = COLOR_TXT;
+    n.lineLimit = 1;
+    n.minimumScaleFactor = 0.7;
+    caja.addSpacer();
+    linea.addSpacer(4);
+    const img = linea.addImage(barra(pct, anchos.barra, 6));
+    img.imageSize = new Size(anchos.barra, 6);
+    linea.addSpacer(4);
+    const valor = linea.addStack();
+    valor.size = new Size(anchos.valor, 0);
+    const v = valor.addText(texto);
+    v.font = Font.regularMonospacedSystemFont(tamFuente);
+    v.textColor = COLOR_SUB;
+    v.lineLimit = 1;
+    v.minimumScaleFactor = 0.6;
+    valor.addSpacer();
 }
 
 async function crearWidget() {
@@ -75,8 +121,23 @@ async function crearWidget() {
     w.addSpacer(6);
 
     const grande = config.widgetFamily === 'large';
-    const anchoBarra = grande ? 170 : 90;
-    const cats = data.categorias;
+    const tamFuente = grande ? 12 : 10;
+    // Barra corta para que siempre quepa "consumido/meta" (p. ej. 12.5/16).
+    const anchos = grande
+        ? {nombre: 120, barra: 100, valor: 64}
+        : {nombre: 34, barra: 44, valor: 42};
+
+    // Kcal del día, a todo lo ancho.
+    if (data.kcal) {
+        const anchosKcal = grande
+            ? {nombre: 120, barra: 90, valor: 80}
+            : {nombre: 34, barra: 170, valor: 70};
+        lineaProgreso(w, 'Kcal', `${data.kcal.consumido}/${data.kcal.meta}`,
+            data.kcal.pct, anchosKcal, tamFuente);
+        w.addSpacer(grande ? 8 : 5);
+    }
+
+    const cats = agruparAOA(data.categorias);
     // Mediano: 2 columnas. Grande: 1 columna con nombres completos.
     const columnas = grande ? 1 : 2;
     const porColumna = Math.ceil(cats.length / columnas);
@@ -87,24 +148,8 @@ async function crearWidget() {
         s.layoutVertically();
         s.spacing = grande ? 6 : 3;
         for (const c of cats.slice(col * porColumna, (col + 1) * porColumna)) {
-            const linea = s.addStack();
-            linea.centerAlignContent();
-            const caja = linea.addStack();
-            caja.size = new Size(grande ? 130 : 36, 0);
-            const nombre = caja.addText(grande ? c.nombre : c.corto);
-            nombre.font = Font.mediumSystemFont(grande ? 12 : 10);
-            nombre.textColor = COLOR_TXT;
-            nombre.lineLimit = 1;
-            nombre.minimumScaleFactor = 0.7;
-            caja.addSpacer();
-            linea.addSpacer(4);
-            const img = linea.addImage(barra(c.pct, anchoBarra, 6));
-            img.imageSize = new Size(anchoBarra, 6);
-            linea.addSpacer(4);
-            const v = linea.addText(`${fmt(c.consumido)}/${fmt(c.meta)}`);
-            v.font = Font.regularMonospacedSystemFont(grande ? 12 : 10);
-            v.textColor = COLOR_SUB;
-            v.lineLimit = 1;
+            lineaProgreso(s, grande ? c.nombre : c.corto,
+                `${fmt(c.consumido)}/${fmt(c.meta)}`, c.pct, anchos, tamFuente);
         }
         if (col < columnas - 1) fila.addSpacer(10);
     }

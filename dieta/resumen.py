@@ -20,6 +20,14 @@ def cumplimiento(consumido: dict[str, float]) -> float:
     return round(100 * sum(scores) / len(scores), 1)
 
 
+def kcal_del_dia(consumido: dict[str, float]) -> dict:
+    """Calorías aproximadas: equivalentes × kcal por equivalente de cada categoría."""
+    cats = catalogo.categorias()
+    c = round(sum(consumido.get(k, 0) * v.get("kcal", 0) for k, v in cats.items()))
+    meta = round(sum(v["meta_diaria"] * v.get("kcal", 0) for v in cats.values()))
+    return {"consumido": c, "meta": meta, "restante": meta - c, "pct": round(100 * c / meta) if meta else 0}
+
+
 def del_dia(fecha: str, registros: list[dict]) -> dict:
     consumido = sumar(registros)
     categorias = []
@@ -35,10 +43,12 @@ def del_dia(fecha: str, registros: list[dict]) -> dict:
             "restante": round(meta - c, 2),
             "pct": round(100 * c / meta) if meta else 0,
         })
+    kcal = kcal_del_dia(consumido)
     return {
         "fecha": fecha,
         "consumido": consumido,
         "categorias": categorias,
+        "kcal": kcal,
         "cumplimiento": cumplimiento(consumido),
         "registros": len(registros),
         "mensaje": mensaje_restante(categorias),
