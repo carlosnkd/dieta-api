@@ -1,0 +1,7 @@
+dieta-api/
+__pycache__/
+.env
+.env.example
+*.db
+service-account*.json
+credentials.json

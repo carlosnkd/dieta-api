@@ -1,0 +1,224 @@
+{
+  "_descripcion": "Lista de Alimentos Equivalentes (Mariana Meza). Cada alimento indica la porción que equivale a 1 equivalente de su grupo. 'cuenta_como' indica a qué categorías del plan (data/plan.json) suma 1 equivalente del grupo.",
+  "grupos": {
+    "verduras": {
+      "nombre": "Verduras",
+      "cuenta_como": {"verduras": 1},
+      "aporte_por_equivalente": {"kcal": 25, "proteina_g": 2, "lipidos_g": 0, "hidratos_g": 4},
+      "alimentos": [
+        {"alimento": "Acelga cocida", "cantidad": 0.5, "unidad": "taza"},
+        {"alimento": "Apio crudo", "cantidad": 1.5, "unidad": "taza"},
+        {"alimento": "Berenjena cocida", "cantidad": 1, "unidad": "taza"},
+        {"alimento": "Betabel", "cantidad": 0.25, "unidad": "pieza"},
+        {"alimento": "Brócoli cocido", "cantidad": 0.5, "unidad": "taza"},
+        {"alimento": "Calabaza", "cantidad": 1, "unidad": "pieza"},
+        {"alimento": "Champiñón cocido", "cantidad": 0.5, "unidad": "taza"},
+        {"alimento": "Chayote", "cantidad": 0.5, "unidad": "pieza"},
+        {"alimento": "Coliflor cocida", "cantidad": 1, "unidad": "taza"},
+        {"alimento": "Espinaca cocida", "cantidad": 0.5, "unidad": "taza"},
+        {"alimento": "Flor de calabaza cocida", "cantidad": 1, "unidad": "taza"},
+        {"alimento": "Germen de soya", "cantidad": 0.333, "unidad": "taza"},
+        {"alimento": "Jícama picada", "cantidad": 0.5, "unidad": "taza"},
+        {"alimento": "Jitomate bola", "cantidad": 1, "unidad": "pieza"},
+        {"alimento": "Jitomate saladet", "cantidad": 2, "unidad": "pieza"},
+        {"alimento": "Jugo de zanahoria", "cantidad": 0.25, "unidad": "taza"},
+        {"alimento": "Lechuga", "cantidad": 3, "unidad": "taza"},
+        {"alimento": "Nopal", "cantidad": 1, "unidad": "taza"},
+        {"alimento": "Pepino", "cantidad": 1, "unidad": "taza"},
+        {"alimento": "Pimiento", "cantidad": 0.5, "unidad": "taza"},
+        {"alimento": "Zanahoria", "cantidad": 0.5, "unidad": "taza"}
+      ]
+    },
+    "frutas": {
+      "nombre": "Frutas",
+      "cuenta_como": {"frutas": 1},
+      "aporte_por_equivalente": {"kcal": 60, "proteina_g": 0, "lipidos_g": 0, "hidratos_g": 15},
+      "alimentos": [
+        {"alimento": "Arándano", "cantidad": 0.5, "unidad": "taza"},
+        {"alimento": "Cerezas", "cantidad": 20, "unidad": "pieza"},
+        {"alimento": "Durazno", "cantidad": 2, "unidad": "pieza"},
+        {"alimento": "Fresa rebanada", "cantidad": 1, "unidad": "taza"},
+        {"alimento": "Guayaba", "cantidad": 3, "unidad": "pieza"},
+        {"alimento": "Mamey", "cantidad": 0.333, "unidad": "pieza"},
+        {"alimento": "Mandarina", "cantidad": 2, "unidad": "pieza"},
+        {"alimento": "Mango", "cantidad": 0.5, "unidad": "pieza"},
+        {"alimento": "Manzana", "cantidad": 1, "unidad": "pieza"},
+        {"alimento": "Melón", "cantidad": 1, "unidad": "taza"},
+        {"alimento": "Naranja", "cantidad": 2, "unidad": "pieza"},
+        {"alimento": "Papaya", "cantidad": 1, "unidad": "taza"},
+        {"alimento": "Pasas", "cantidad": 10, "unidad": "pieza"},
+        {"alimento": "Pera", "cantidad": 0.5, "unidad": "pieza"},
+        {"alimento": "Piña", "cantidad": 0.75, "unidad": "taza"},
+        {"alimento": "Plátano", "cantidad": 0.5, "unidad": "pieza"},
+        {"alimento": "Sandía", "cantidad": 1, "unidad": "taza"},
+        {"alimento": "Toronja", "cantidad": 1, "unidad": "pieza"},
+        {"alimento": "Tunas", "cantidad": 2, "unidad": "pieza"},
+        {"alimento": "Uvas", "cantidad": 18, "unidad": "pieza"}
+      ]
+    },
+    "cereales": {
+      "nombre": "Cereales",
+      "cuenta_como": {"cereales": 1},
+      "aporte_por_equivalente": {"kcal": 70, "proteina_g": 2, "lipidos_g": 0, "hidratos_g": 15},
+      "alimentos": [
+        {"alimento": "Arroz cocido", "cantidad": 0.25, "unidad": "taza"},
+        {"alimento": "Arroz integral", "cantidad": 0.333, "unidad": "taza"},
+        {"alimento": "Avena cruda (hojuela)", "cantidad": 0.333, "unidad": "taza"},
+        {"alimento": "Bolillo sin migajón", "cantidad": 0.5, "unidad": "pieza"},
+        {"alimento": "Cereal sin azúcar", "cantidad": 0.5, "unidad": "taza"},
+        {"alimento": "Elote cocido", "cantidad": 1, "unidad": "taza"},
+        {"alimento": "Espagueti cocido", "cantidad": 0.333, "unidad": "taza"},
+        {"alimento": "Galletas Animalitos", "cantidad": 6, "unidad": "pieza"},
+        {"alimento": "Galletas María", "cantidad": 5, "unidad": "pieza"},
+        {"alimento": "Galletas Salmas", "cantidad": 3, "unidad": "pieza"},
+        {"alimento": "Hojuelas de maíz", "cantidad": 0.5, "unidad": "taza"},
+        {"alimento": "Palomitas caseras", "cantidad": 2.5, "unidad": "taza"},
+        {"alimento": "Pan de sándwich", "cantidad": 1, "unidad": "pieza"},
+        {"alimento": "Papa cocida", "cantidad": 0.5, "unidad": "pieza"},
+        {"alimento": "Pasta cocida", "cantidad": 0.5, "unidad": "taza"},
+        {"alimento": "Tortilla de maíz", "cantidad": 1, "unidad": "pieza"},
+        {"alimento": "Tostadas horneadas", "cantidad": 2, "unidad": "pieza"}
+      ]
+    },
+    "leguminosas": {
+      "nombre": "Leguminosas",
+      "cuenta_como": {"cereales": 1, "aoa_bajo_grasa": 1},
+      "_nota": "El plan no asigna leguminosas. Se reparten según su aporte (SMAE): 1 equivalente ≈ 1 cereal + 1 alimento de origen animal bajo en grasa.",
+      "aporte_por_equivalente": {"kcal": 120, "proteina_g": 8, "lipidos_g": 1, "hidratos_g": 20},
+      "alimentos": [
+        {"alimento": "Alubias", "cantidad": 0.5, "unidad": "taza"},
+        {"alimento": "Frijol cocido entero", "cantidad": 0.5, "unidad": "taza"},
+        {"alimento": "Frijol molido", "cantidad": 0.25, "unidad": "taza"},
+        {"alimento": "Garbanzo cocido", "cantidad": 0.5, "unidad": "taza"},
+        {"alimento": "Haba cocida", "cantidad": 0.5, "unidad": "taza"},
+        {"alimento": "Lenteja cocida", "cantidad": 0.5, "unidad": "taza"}
+      ]
+    },
+    "leche": {
+      "nombre": "Leche",
+      "cuenta_como": {"leche": 1},
+      "aporte_por_equivalente": {"kcal": 95, "proteina_g": 9, "lipidos_g": 2, "hidratos_g": 12},
+      "alimentos": [
+        {"alimento": "Leche light / Lala 100", "cantidad": 1, "unidad": "taza", "nota": "1 taza = 240 ml"},
+        {"alimento": "Jocoque", "cantidad": 0.5, "unidad": "taza"},
+        {"alimento": "Yogurt natural bajo en grasa o light", "cantidad": 1, "unidad": "taza"},
+        {"alimento": "Leche de soya o almendra", "cantidad": 1, "unidad": "taza"}
+      ]
+    },
+    "aoa_muy_bajo_grasa": {
+      "nombre": "Alimentos de origen animal - muy bajo aporte de grasa",
+      "cuenta_como": {"aoa_bajo_grasa": 1},
+      "_nota": "El plan los agrupa con 'bajo aporte de grasa'.",
+      "aporte_por_equivalente": {"kcal": 40, "proteina_g": 7, "lipidos_g": 1, "hidratos_g": 0},
+      "alimentos": [
+        {"alimento": "Atún en agua", "cantidad": 33, "unidad": "g", "nota": "1/3 de lata"},
+        {"alimento": "Pechuga de pollo (filete o molida)", "cantidad": 30, "unidad": "g"},
+        {"alimento": "Camarón cocido", "cantidad": 5, "unidad": "pieza"},
+        {"alimento": "Clara de huevo", "cantidad": 2, "unidad": "pieza"},
+        {"alimento": "Filete de pescado", "cantidad": 40, "unidad": "g"},
+        {"alimento": "Pechuga de pavo/pollo (rebanada)", "cantidad": 1.5, "unidad": "rebanada"},
+        {"alimento": "Queso cottage", "cantidad": 3, "unidad": "cucharada"},
+        {"alimento": "Surimi", "cantidad": 0.667, "unidad": "barra"}
+      ]
+    },
+    "aoa_bajo_grasa": {
+      "nombre": "Alimentos de origen animal - bajo aporte de grasa",
+      "cuenta_como": {"aoa_bajo_grasa": 1},
+      "aporte_por_equivalente": {"kcal": 55, "proteina_g": 7, "lipidos_g": 3, "hidratos_g": 0},
+      "alimentos": [
+        {"alimento": "Filete de cerdo", "cantidad": 40, "unidad": "g"},
+        {"alimento": "Pavo", "cantidad": 45, "unidad": "g"},
+        {"alimento": "Queso panela", "cantidad": 40, "unidad": "g"},
+        {"alimento": "Salmón", "cantidad": 30, "unidad": "g"}
+      ]
+    },
+    "aoa_moderado_grasa": {
+      "nombre": "Alimentos de origen animal - moderado aporte de grasa",
+      "cuenta_como": {"aoa_moderado_grasa": 1},
+      "aporte_por_equivalente": {"kcal": 75, "proteina_g": 7, "lipidos_g": 5, "hidratos_g": 0},
+      "alimentos": [
+        {"alimento": "Huevo entero", "cantidad": 1, "unidad": "pieza"},
+        {"alimento": "Queso parmesano", "cantidad": 3.5, "unidad": "cucharada"},
+        {"alimento": "Salchicha de pavo", "cantidad": 1, "unidad": "pieza"},
+        {"alimento": "Sardinas", "cantidad": 3, "unidad": "pieza"}
+      ]
+    },
+    "grasas_con_proteina": {
+      "nombre": "Grasas con proteína",
+      "cuenta_como": {"grasas_con_proteina": 1},
+      "aporte_por_equivalente": {"kcal": 70, "proteina_g": 3, "lipidos_g": 5, "hidratos_g": 3},
+      "alimentos": [
+        {"alimento": "Almendras", "cantidad": 10, "unidad": "pieza"},
+        {"alimento": "Cacahuates naturales", "cantidad": 14, "unidad": "pieza"},
+        {"alimento": "GoldenNuts salados", "cantidad": 0.25, "unidad": "bolsa"},
+        {"alimento": "Nuez", "cantidad": 3, "unidad": "pieza"},
+        {"alimento": "Pistaches", "cantidad": 10, "unidad": "pieza"},
+        {"alimento": "Semillas", "cantidad": 20, "unidad": "pieza"},
+        {"alimento": "Chía", "cantidad": 3, "unidad": "cucharadita"}
+      ]
+    },
+    "grasas_sin_proteina": {
+      "nombre": "Aceites y grasas sin proteína",
+      "cuenta_como": {"grasas_sin_proteina": 1},
+      "aporte_por_equivalente": {"kcal": 45, "proteina_g": 0, "lipidos_g": 5, "hidratos_g": 0},
+      "alimentos": [
+        {"alimento": "Aceite en spray", "cantidad": 5, "unidad": "disparo"},
+        {"alimento": "Aceite", "cantidad": 1, "unidad": "cucharada", "nota": "Así viene en la lista; el plan usa 1 cucharadita de aceite como porción de cocina."},
+        {"alimento": "Aderezo", "cantidad": 1, "unidad": "cucharada"},
+        {"alimento": "Aguacate", "cantidad": 0.333, "unidad": "pieza"},
+        {"alimento": "Crema light", "cantidad": 5, "unidad": "cucharada"},
+        {"alimento": "Crema para café", "cantidad": 1, "unidad": "cucharada"},
+        {"alimento": "Mantequilla / mantequilla ghee", "cantidad": 1, "unidad": "cucharadita"},
+        {"alimento": "Mayonesa", "cantidad": 1, "unidad": "cucharadita"},
+        {"alimento": "Queso crema", "cantidad": 1, "unidad": "cucharada"}
+      ]
+    },
+    "scoop_proteina": {
+      "nombre": "Scoop de proteína (Gold Standard)",
+      "cuenta_como": {"scoop_proteina": 1},
+      "aporte_por_equivalente": {"kcal": 120, "proteina_g": 24, "lipidos_g": 1.5, "hidratos_g": 3},
+      "alimentos": [
+        {"alimento": "Proteína whey Gold Standard", "cantidad": 1, "unidad": "scoop"}
+      ]
+    },
+    "alimentos_libres": {
+      "nombre": "Alimentos libres",
+      "cuenta_como": {},
+      "aporte_por_equivalente": {"kcal": 0, "proteina_g": 0, "lipidos_g": 0, "hidratos_g": 0},
+      "alimentos": [
+        {"alimento": "Agua mineral", "cantidad": 1, "unidad": "lata"},
+        {"alimento": "Café sin azúcar", "cantidad": 1, "unidad": "taza"},
+        {"alimento": "Mostaza", "cantidad": 1, "unidad": "cucharadita"},
+        {"alimento": "Salsa de soya", "cantidad": 1, "unidad": "cucharadita"},
+        {"alimento": "Salsa inglesa", "cantidad": 0.5, "unidad": "cucharada"},
+        {"alimento": "Salsa picante", "cantidad": 1, "unidad": "cucharadita"},
+        {"alimento": "Vinagre balsámico", "cantidad": 1, "unidad": "cucharadita"}
+      ]
+    }
+  },
+  "extras_del_plan": {
+    "_descripcion": "Porciones que no vienen en la lista de equivalentes pero se deducen del Plan Nutricional (o, si se indica, del SMAE). Tienen prioridad sobre una estimación.",
+    "alimentos": [
+      {"alimento": "Avena cocida", "cantidad": 0.3, "unidad": "taza", "cuenta_como": {"cereales": 1}, "fuente": "Plan: 1 1/2 taza de avena cocida = 5 cereales del desayuno"},
+      {"alimento": "Camote amarillo cocido / puré", "cantidad": 70, "unidad": "g", "cuenta_como": {"cereales": 1}, "fuente": "Plan: 350 g de camote = 5 cereales del desayuno"},
+      {"alimento": "Arroz cocido (por peso)", "cantidad": 50, "unidad": "g", "cuenta_como": {"cereales": 1}, "fuente": "Plan: 350 g de arroz cocido = 7 cereales de la comida"},
+      {"alimento": "Papa cocida (por peso)", "cantidad": 57, "unidad": "g", "cuenta_como": {"cereales": 1}, "fuente": "Plan: 400 g de papa cocida = 7 cereales de la comida"},
+      {"alimento": "Pasta cocida (por peso)", "cantidad": 60, "unidad": "g", "cuenta_como": {"cereales": 1}, "fuente": "Plan: 420 g de pasta cocida = 7 cereales de la comida"},
+      {"alimento": "Proteína animal genérica cocida (pollo, res, pescado)", "cantidad": 25, "unidad": "g", "cuenta_como": {"aoa_bajo_grasa": 1}, "fuente": "Plan: 350 g de proteína animal = 14 AOA de la comida. Usar solo si no se especifica el tipo de carne."},
+      {"alimento": "Yogurt griego natural", "cantidad": 4, "unidad": "cucharada", "cuenta_como": {"leche": 1}, "fuente": "Plan: 4 cdas de yogurt griego en el desayuno (≈60 g). 1 cucharada ≈ 15 g"},
+      {"alimento": "Fruta libre (picada)", "cantidad": 1, "unidad": "taza", "cuenta_como": {"frutas": 1}, "fuente": "Plan: '1 taza de fruta libre'"},
+      {"alimento": "Verdura libre", "cantidad": 1, "unidad": "porción", "cuenta_como": {"verduras": 1}, "fuente": "Plan: '2 porciones de verdura libre'"},
+      {"alimento": "Mango (pieza entera)", "cantidad": 1, "unidad": "pieza", "cuenta_como": {"frutas": 2}, "fuente": "Lista: 1/2 mango = 1 fruta"},
+      {"alimento": "Crema de maní o de almendra", "cantidad": 0.5, "unidad": "cucharada", "cuenta_como": {"grasas_con_proteina": 1}, "fuente": "SMAE: 1 1/2 cucharaditas = 1 grasa con proteína"},
+      {"alimento": "Aceite (cucharadita)", "cantidad": 1, "unidad": "cucharadita", "cuenta_como": {"grasas_sin_proteina": 1}, "fuente": "Plan: 1 cdta de aceite o ghee se usa como 1 porción de grasa al cocinar"},
+      {"alimento": "Puño de frutos secos (nueces, almendras, cacahuates)", "cantidad": 1, "unidad": "puño", "cuenta_como": {"grasas_con_proteina": 1}, "fuente": "Plan (opción b del desayuno)"},
+      {"alimento": "Bagel", "cantidad": 0.5, "unidad": "pieza", "cuenta_como": {"cereales": 2}, "fuente": "SMAE aprox.: 1/2 bagel (≈45 g) ≈ 2 cereales"}
+    ]
+  },
+  "conversiones": {
+    "taza_ml": 240,
+    "cucharada_ml": 15,
+    "cucharadita_ml": 5,
+    "taza_cucharadas": 16
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "_descripcion": "Plan Nutricional (Mariana Meza, 06/07/26). 'meta_diaria' sale de la Tabla de Equivalencias del plan y es contra lo que se mide cada día. 'tiempos_de_comida' es el desglose del Menú Ejemplo, como referencia.",
+  "objetivo": "Aumentar masa muscular",
+  "zona_horaria": "America/Mexico_City",
+  "categorias": {
+    "verduras":            {"nombre": "Verduras",                 "corto": "Verd",  "meta_diaria": 4},
+    "frutas":              {"nombre": "Frutas",                   "corto": "Fruta", "meta_diaria": 5},
+    "cereales":            {"nombre": "Cereales",                 "corto": "Cer",   "meta_diaria": 16},
+    "aoa_bajo_grasa":      {"nombre": "AOA bajo en grasa",        "corto": "AOA-b", "meta_diaria": 14},
+    "aoa_moderado_grasa":  {"nombre": "AOA moderado en grasa",    "corto": "AOA-m", "meta_diaria": 4},
+    "scoop_proteina":      {"nombre": "Scoop proteína",           "corto": "Scoop", "meta_diaria": 2},
+    "leche":               {"nombre": "Leche",                    "corto": "Leche", "meta_diaria": 3},
+    "grasas_sin_proteina": {"nombre": "Grasas sin proteína",      "corto": "Gras",  "meta_diaria": 3},
+    "grasas_con_proteina": {"nombre": "Grasas con proteína",      "corto": "GrasP", "meta_diaria": 3}
+  },
+  "tiempos_de_comida": {
+    "desayuno": {
+      "hora": "09:00",
+      "equivalentes": {"verduras": 2, "frutas": 2, "cereales": 5, "aoa_moderado_grasa": 4, "grasas_sin_proteina": 2, "leche": 1},
+      "menu": [
+        "4 piezas de huevo (completas) + 2 porciones de verdura libre + 1 cdta de aceite o 1 cdta de mantequilla ghee",
+        "Opción a) 1 1/2 taza de avena cocida + 4 cdas de yogurt griego + 1 taza de fruta libre",
+        "Opción b) 350 g de camote amarillo cocido (en puré de preferencia) + 1 pieza de mango + 4 cdas de yogurt griego + 1 puño de frutos secos"
+      ],
+      "_nota": "La leche (yogurt griego) no viene en el encabezado del desayuno pero sí en el menú; se cuenta como 1 leche."
+    },
+    "comida": {
+      "hora": "14:00",
+      "equivalentes": {"verduras": 2, "frutas": 1, "aoa_bajo_grasa": 14, "cereales": 7, "grasas_sin_proteina": 2, "grasas_con_proteina": 1},
+      "menu": [
+        "350 g de arroz cocido | 400 g de papa cocida | 420 g de pasta cocida",
+        "350 g de proteína animal",
+        "Cocinar con 1 cdta de aceite + 1/3 de aguacate",
+        "Alternativa: 250 g de arroz cocido + postre: 1/2 bagel + 1 cda de maní | 1 plátano"
+      ]
+    },
+    "cena": {
+      "hora": "post entrene",
+      "equivalentes": {"leche": 2, "cereales": 2.25, "frutas": 2, "grasas_con_proteina": 2, "scoop_proteina": 2},
+      "menu": [
+        "SUPER LICUADO: 500 ml de leche",
+        "3/4 taza de hojuela de avena (días pesados: + 1 Oreo)",
+        "2 tazas de fruta libre",
+        "1 cda de crema de maní o almendra",
+        "2 scoops de proteína"
+      ]
+    }
+  },
+  "suma_del_menu": {
+    "verduras": 4, "frutas": 5, "cereales": 14.25, "aoa_bajo_grasa": 14, "aoa_moderado_grasa": 4,
+    "scoop_proteina": 2, "leche": 3, "grasas_sin_proteina": 4, "grasas_con_proteina": 3
+  },
+  "_diferencias_tabla_vs_menu": [
+    "Cereales: la tabla marca 16 y el menú suma 14.25 (5 + 7 + 3/4 taza de avena cruda = 2.25). Quedan ~1.75 de margen (p. ej. el Oreo o el postre).",
+    "Grasas sin proteína: la tabla marca 3 y el menú suma 4 (2 en el desayuno + 2 en la comida). Ajusta 'meta_diaria' si tu nutrióloga confirma 4."
+  ],
+  "notas": [
+    "Si compras la beta-alanina, se consume 20-30 min antes de entrenar.",
+    "No olvides la creatina y los omegas.",
+    "Consume carne roja mínimo 2 veces por semana.",
+    "Toma fotos de frente, lado y espalda (en ropa deportiva) para medir progreso."
+  ]
+}
