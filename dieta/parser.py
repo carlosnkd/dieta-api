@@ -113,7 +113,8 @@ gramos"). Interprétalo de forma razonable.
    - Si no dice cantidad, asume 1 porción típica.
    - 1 taza = 240 ml, 1 cucharada = 15 ml, 1 cucharadita = 5 ml.
 8. Redondea cada equivalente a 2 decimales. No incluyas categorías con 0.
-9. "referencia" es una línea corta que muestra la cuenta, p. ej. "Lista: 1 pieza Huevo = 1 AOA moderado → 4 × 1".
+9. "cantidad" y "unidad" son lo que Carlos consumió (1 taza, 60 g), NUNCA la porción de referencia de la lista.
+   "referencia" es una línea corta que muestra la cuenta, p. ej. "Lista: 1 pieza Huevo = 1 AOA moderado → 4 × 1".
 10. "aclaraciones": vacío si todo fue claro; si algo no se entendió o no es comida, dilo ahí y no lo \
 incluyas en items.
 
