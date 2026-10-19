@@ -45,6 +45,23 @@ def health():
     return {"ok": True, "fecha": str(hoy()), "hora": ahora().strftime("%H:%M")}
 
 
+@app.get("/diagnostico", dependencies=[Depends(auth)])
+def diagnostico():
+    """Para revisar la configuración del servidor sin exponer secretos."""
+    from dieta import config
+
+    k = config.ANTHROPIC_API_KEY
+    return {
+        "anthropic_key": f"{k[:12]}…{k[-4:]}" if k else None,
+        "anthropic_key_largo": len(k),
+        "anthropic_key_caracteres_raros": any(not ch.isprintable() or ch.isspace() for ch in k),
+        "modelo": config.ANTHROPIC_MODEL,
+        "almacenamiento": type(get_storage()).__name__,
+        "pestana": config.WORKSHEET,
+        "zona_horaria": str(config.TZ),
+    }
+
+
 @app.post("/comida", dependencies=[Depends(auth)])
 def registrar_comida(c: Comida):
     storage = get_storage()
